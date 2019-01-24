@@ -55,7 +55,7 @@ class Preloader extends Component{
         if(full) className += ' preloader__full';
         if(first) {
             setTimeout(() => {
-                store.dispatch(loadSwitch(false))
+                store.dispatch(loadSwitch(false));
             }, 3000);
         }
         return(

@@ -56,6 +56,7 @@
     "publish": "git subtree push --prefix build origin master"
   },
   "devDependencies": {
+    "burlak": "^1.0.7",
     "gh-pages": "^1.2.0",
     "node-sass": "^4.10.0",
     "react-redux": "^5.0.7",
