@@ -4,6 +4,21 @@ import { NavLink } from 'react-router-dom'
 import Title from './Operator/Title';
 
 class List extends Component{
+    
+    renderOperators(operators){
+        return operators.map((item, index) => {
+            return(
+                <div key={index} className="operator operator__list">
+                    <NavLink className="operator-link"
+                        to={'operator/'+item.systemName}
+                        >
+                        <Title item={item} />
+                    </NavLink>
+                </div>
+            )
+        })
+    }
+
     render(){
         let {operators = []} = this.props;
         return(
@@ -15,17 +30,7 @@ class List extends Component{
                 </div>
                 <div className="terminal-body">
                     {operators.length ? 
-                        operators.map((item, index) => {
-                            return(
-                                <div key={index} className="operator operator__list">
-                                    <NavLink className="operator-link"
-                                        to={'operator/'+item.systemName}
-                                        >
-                                        <Title item={item} />
-                                    </NavLink>
-                                </div>
-                            )
-                        }) :
+                        this.renderOperators(operators) :
                         <div>
                             Loading
                         </div>    
