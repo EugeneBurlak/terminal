@@ -5,12 +5,10 @@ import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 import {Route, Switch} from 'react-router';
 import {ConnectedRouter} from 'react-router-redux';
-import { connect } from 'react-redux';
-import Preloader from './components/Preloader';
 import Main from './containers/Main';
 import View from './containers/View';
 import {getOperators, setOperators} from './actions/terminal';
-
+import './assets/sass/common.scss';
 class App extends Component{
 
     componentWillMount(){
@@ -20,10 +18,8 @@ class App extends Component{
     }
 
     render(){
-        let {loading = false} = this.props;
         return(        
-            <div className={loading ? 'app-wrapper' : 'app-wrapper app-wrapper__loaded'}>
-                <Preloader loading={loading} /> 
+            <div className="terminal">
                 <ConnectedRouter history={history}>                
                     <Switch>   
                         <Route exact path="/" component={Main} />
@@ -35,17 +31,9 @@ class App extends Component{
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    return {
-      loading: state.appReducer.loading
-    }
-};
-
-App = connect(mapStateToProps)(App);
-
 ReactDOM.render(
     <Provider store={store}>
         <App />
-    </Provider>, 
+    </Provider>,
 document.getElementById('app'));
 registerServiceWorker();

@@ -1,9 +1,9 @@
 import React from 'react'
-import View from '../../components/Terminal/view.jsx';
+import View from '../../components/Terminal/View';
 
 const view = ({match}) => {
 	return (
-		<View name={match.params.name}/>
+		<View operator={match.params.name}/>
 	)
 }
 

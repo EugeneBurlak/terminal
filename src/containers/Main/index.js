@@ -1,5 +1,5 @@
 import React from 'react'
-import List from '../../components/Terminal/list.jsx';
+import List from '../../components/Terminal/List';
 
 const index = () => {
   	return (
