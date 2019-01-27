@@ -4,15 +4,15 @@ export function getOperators(){
 		let operators = [{
 			name: 'MTS',
 			systemName: 'mts',
-			icon: 'https://g-1.limited/images/002/480/888/2480888/1689x/mts.png'
+			icon: 'http://lh3.googleusercontent.com/0_yPz4R0JrcRVo4O7-gLUOUsnW21NqEz63G_6NSnBG8O0U8Q3a2oJxGZrPEKahJjQ4g=w100'
 		},{
 			name: 'Beeline',
 			systemName: 'beeline',
-			icon: 'http://verstka.weblandgroup.com/uzcard/images/beelinelogo.png'
+			icon: 'https://static.beeline.ru/upload/images/b2c/bee-logo/single.png'
 		},{
 			name: 'Megafon',
 			systemName: 'megafon',
-			icon: 'http://chini-taun.ru/uploads/admin/images/devices/TOy4nmc3NE3MBN6.png'
+			icon: 'http://moscow.megafon.ru/ai/program/56/list_image/private-office-big.png'
 		}];
 		resolve(operators);
 	});
